@@ -3,16 +3,32 @@ import Hero from "./component/Hero";
 import MyFooter from "./component/MyFooter";
 import MyNavbar from "./component/MyNavbar";
 import MyFilm from "./component/MyFilm";
+import { Container } from "react-bootstrap";
+import TVShow from "./component/TVShow";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="bg-dark">
-      <MyNavbar />
-      <Hero />
-      <MyFilm film="Thor" />
-      <MyFilm film="Batman" />
-      <MyFilm film="Superman" />
-      <MyFooter />
-    </div>
+    <BrowserRouter>
+      <Container fluid className="bg-dark">
+        <MyNavbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <MyFilm film="Thor" />
+                <MyFilm film="Batman" />
+                <MyFilm film="Superman" />
+              </>
+            }
+          />
+          <Route path="/TVShow" element={<TVShow />} />
+        </Routes>
+
+        <MyFooter />
+      </Container>
+    </BrowserRouter>
   );
 }
 export default App;

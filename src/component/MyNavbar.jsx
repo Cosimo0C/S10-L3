@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link } from "react-router-dom";
 
 function MyNavbar() {
   return (
@@ -13,10 +14,10 @@ function MyNavbar() {
         <Navbar.Toggle className="bg-light" aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-lg-0" style={{ maxHeight: "100px" }} navbarScroll>
-            <Nav.Link className="fw-normal text-white">Home</Nav.Link>
-            <Nav.Link className="fw-bold text-white" href="#">
-              TV Shows
-            </Nav.Link>
+            <Link to="/">Home</Link>
+            <Link to="/TVShow" className="nav-link">
+              Tv Show
+            </Link>
             <Nav.Link className="fw-normal text-white" href="#">
               Movies
             </Nav.Link>
