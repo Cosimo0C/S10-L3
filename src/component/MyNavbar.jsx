@@ -14,8 +14,10 @@ function MyNavbar() {
         <Navbar.Toggle className="bg-light" aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-lg-0" style={{ maxHeight: "100px" }} navbarScroll>
-            <Link to="/">Home</Link>
-            <Link to="/TVShow" className="nav-link">
+            <Link to="/" className="nav-link text-white fs-5 fw-bold">
+              Home
+            </Link>
+            <Link to="/TVShow" className="nav-link text-white">
               Tv Show
             </Link>
             <Nav.Link className="fw-normal text-white" href="#">

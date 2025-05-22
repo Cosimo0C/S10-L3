@@ -6,12 +6,13 @@ function TVShow() {
     <div className="bg-dark">
       <h1 className="text-white">Sei su Tv shows</h1>
       <MyFilm film="Spider-man" />
+      <MyFilm film="Loki" />
+      <MyFilm film="Punisher" />
       <Button
         onClick={() => {
-          Navigate("/");
+          Navigate("/Home");
         }}
       >
-        {" "}
         Torna Home
       </Button>
     </div>
